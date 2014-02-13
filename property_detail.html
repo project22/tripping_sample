@@ -13,7 +13,7 @@
     <title>Simple markers</title>
     <style>
       html, body, #map-canvas {
-        height: 500px;
+        height: 350px;
         margin: 0px;
         padding: 0px
       }
@@ -69,58 +69,33 @@
 <body class="body">
 
 
-	<nav class="navbar navbar-default header" role="navigation">
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	     
-	      <a class="navbar-brand logo" href="#">Brand</a>
-	    </div>
-
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Link</a></li>
-	        <li><a href="#">Link</a></li>
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
-	            <li class="divider"></li>
-	            <li><a href="#">Separated link</a></li>
-	            <li class="divider"></li>
-	            <li><a href="#">One more separated link</a></li>
-	          </ul>
-	        </li>
-	      </ul>
-	      <form class="navbar-form navbar-left" role="search">
-	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="Where are you going?">
-	        </div>
-	        <button type="submit" class="btn btn-default">Search</button>
-	      </form>
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">Link</a></li>
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
-	            <li class="divider"></li>
-	            <li><a href="#">Separated link</a></li>
-	          </ul>
-	        </li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+	<div class="header">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="images/tripping_white.png">
+			</div>
+			<div class="col-md-5">
+				<form class="form-inline" role="form">
+				  <div class="form-group">
+				    <label class="sr-only" for="exampleInputEmail2">Location</label>
+				    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Where do you want to go?">
+				  </div> 
+				  <button type="submit" class="btn btn-default">Search</button>
+				</form>
+			</div>
+			<div class="col-md-5 ">
+				<div class="pull-right">
+					About | Deals
+					<button type="button" class="btn btn-info">List Your Property</button>
+					<button type="button" class="btn btn-warning">Login</button>
+				</div>				
+			</div>
+		</div>
+	</div>
 
 
 
-	<div class="container-fluid">
+	<div class="container-fluid page-top-spacing">
 		<!-- main container -->
 <!-- 		<div class="row">
 			<ol class="breadcrumb">
@@ -136,34 +111,62 @@
 			
 				  <!-- <div class="panel-heading"><strong>Florianopolis</strong></div> -->
 				
-				    <div id="map-canvas"></div>
-				  
+				<div id="map-canvas"></div>
+				<div class="property-box">
+					<div class="property-selected">
+						<div class="pull-left">
+							<img class="property-thumbnail" src="https://s3.amazonaws.com/tripping-partners/housetrip/images/131259/3d0257d199d0ba26780f43fc043525a3_lp.jpg" alt="...">
+						</div>
+						<div class="property-thumb-details">
+							<p>Casa de Sol</p>
+							<strong>$33 / night</strong>
+							<p>3 bed / 2bth</p>
+					  </div>
+					</div>					
+					<div class="property-pointer">
+					</div>
+				</div>
+				
+				<div class="property-box">
+					<div class="property-not-selected">
+						<div class="pull-left">
+							<img class="property-thumbnail" src="https://s3.amazonaws.com/tripping-partners/housetrip/images/131259/3d0257d199d0ba26780f43fc043525a3_lp.jpg" alt="...">
+						</div>
+						<div class="property-thumb-details">
+							<p>Casa de Sol</p>
+							<strong>$33 / night</strong>
+							<p>3 bed / 2bth</p>
+					  </div>
+					</div>					
+				</div>  
+
+				<div class="property-box">
+					<div class="property-not-selected">
+						<div class="pull-left">
+							<img class="property-thumbnail" src="https://s3.amazonaws.com/tripping-partners/housetrip/images/131259/3d0257d199d0ba26780f43fc043525a3_lp.jpg" alt="...">
+						</div>
+						<div class="property-thumb-details">
+							<p>Casa de Sol</p>
+							<strong>$33 / night</strong>
+							<p>3 bed / 2bth</p>
+					  </div>
+					</div>					
+				</div>  
+
+				<div class="property-box">
+					<div class="property-not-selected">
+						<div class="pull-left">
+							<img class="property-thumbnail" src="https://s3.amazonaws.com/tripping-partners/housetrip/images/131259/3d0257d199d0ba26780f43fc043525a3_lp.jpg" alt="...">
+						</div>
+						<div class="property-thumb-details">
+							<p>Casa de Sol</p>
+							<strong>$33 / night</strong>
+							<p>3 bed / 2bth</p>
+					  </div>
+					</div>					
+				</div>  
 				
 
-				<div class="panel panel-default">
-				  <div class="panel-heading"><strong>Nearby Properties</strong></div>
-				  
-			     <ul class="list-group">
-				    <li class="list-group-item">
-				    	<div class="row">
-				    		<div class="col-md-6">
-							  
-							    <img class="property-thumbnail" src="https://s3.amazonaws.com/tripping-partners/housetrip/images/131259/3d0257d199d0ba26780f43fc043525a3_lp.jpg" alt="...">
-							  
-								</div>
-								<div class="col-md-6">	
-									<strong>$33 / night</strong>
-									<p>3 bed / 2bth</p>
-							  </div>
-							</div>
-						</li>
-				    <li class="list-group-item">Dapibus ac facilisis in</li>
-				    <li class="list-group-item">Morbi leo risus</li>
-				    <li class="list-group-item">Porta ac consectetur ac</li>
-				    <li class="list-group-item">Vestibulum at eros</li>
-				  </ul>
-			  
-				</div>
 				
 			</div>
 			<!-- end left nav map column -->
@@ -186,9 +189,23 @@
 						</div> -->
 						<div class="row">
 							<div class="col-md-12">
-								<div class="panel panel-default">
+								<div class="panel panel-default main-panel">
 
 									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-6 property-headline">
+												<h1>Casa de Sol</h1>
+											</div>
+											<div class="col-md-6 padding-top">
+												<div class="pw-widget pw-size-medium pw-counter-show pull-right">			
+													<a class="pw-button-facebook"></a>			
+													<a class="pw-button-twitter"></a>			
+													<a class="pw-button-email"></a>			
+													<a class="pw-button-post"></a>		
+												</div>
+											</div>
+										</div>
+										<p class="location-link"><a href="#">Florianopolis, Brazil</a></p>
 
 										<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 										  <!-- Indicators -->
@@ -225,22 +242,10 @@
 										</div>
 
 										<!-- put content here -->
-										<div class="row padding-top">
-											<div class="col-md-6">
-												<h1>Casa de Sol</h1>
-											</div>
-											<div class="col-md-6 ">
-												<div class="pw-widget pw-size-medium pw-counter-show pull-right">			
-													<a class="pw-button-facebook"></a>			
-													<a class="pw-button-twitter"></a>			
-													<a class="pw-button-email"></a>			
-													<a class="pw-button-post"></a>		
-												</div>
-											</div>
-										</div>
+										
 										<div class="row description-block">
 											<div class="col-md-12">
-										<p class="grey-copy">Situated in Florianópolis, this 2 bedroom house accommodates up to 4 guests and starts at just EUR 121 per night.
+										<p class="grey-copy padding-top">Situated in Florianópolis, this 2 bedroom house accommodates up to 4 guests and starts at just EUR 121 per night.
 The accommodation is 80 sqm.
 This house is child-friendly. It also has internet (cable) access. It features 2 double beds and has 1 bathroom. Bed linens and towels are included.
 Additionally, it offers a kitchen with a fridge, a freezer, a grill, a microwave, an oven, a coffee maker, a toaster, a kettle / water-boiler, a dryer, and a washing machine. The property has a garden, parking / a garage... <a href="#">Read more</a></p>
@@ -390,7 +395,7 @@ Additionally, it offers a kitchen with a fridge, a freezer, a grill, a microwave
 						  <div class="panel-body">
 						  	<button type="button" class="btn btn-info btn-block"><span class="glyphicon glyphicon-heart"></span> Save for later</button>
 						  	<h4 class="text-center grey-copy padding-top">
-						  	saved 5 times</h4>
+						  	Saved 5 times</h4>
 						 	</div>
 						</div>
 						<h4>Reviews</h4>

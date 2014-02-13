@@ -9,6 +9,16 @@
 .header {
 	background-color: #f47322;
 	color: white;
+/*	padding: 20px;*/
+	position: fixed;
+	z-index: 50;
+	width: 100%;
+}
+
+.page-top-spacing {
+	padding-top: 70px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .property-image {
@@ -34,8 +44,8 @@
 }
 
 .property-thumbnail {
-	width: 100px;
-	height: 70px;
+	width: 90px;
+	height: 100%;
 }
 
 .user-thumbnail {
@@ -43,12 +53,18 @@
 	height: 60px;
 }
 
+.property-thumb-details {
+	margin-left: 100px;
+	
+	top: 0px;
+}
+
 .padding-top {
-	padding: 20px 10px 0px 10px;
+	padding-top: 20px;
 }
 
 .description-block {
-	padding: 10px;
+	padding: 10 5 10 5px;
 
 }
 
@@ -66,6 +82,69 @@
 	padding-top: 5px;
 	padding-bottom: 0px;
 }
+
+.selected-property {
+	border-color: #f47322;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.property-headline {
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+.location-link {
+	font-size: 14pt;
+}
+
+.property-box {
+	margin-top: 5px;
+	position: relative;
+	height: 100px;
+	background-color: white;
+}
+.property-not-selected {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dddddd;;
+	position: relative;
+	height: 100%;
+	padding: 10px;
+}
+.property-selected {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #f47322;
+	position: relative;
+	height: 100%;
+	padding: 10px;
+}
+
+.property-pointer {
+	position: absolute;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-width: 1px; 
+	border-color: #f47322;
+	background-color: white;
+	width: 14px;
+	height: 14px;
+	top:44%;
+	right:-7px;
+	z-index: 10;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg); /* IE 9 */
+	-webkit-transform:rotate(45deg); /* Safari and Chrome */
+
+}
+
+.main-panel {
+	padding: 0 15 15 15px;
+}
+
+
+
 
 
 
