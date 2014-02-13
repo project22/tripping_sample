@@ -9,10 +9,27 @@
 .header {
 	background-color: #f47322;
 	color: white;
-/*	padding: 20px;*/
 	position: fixed;
 	z-index: 50;
 	width: 100%;
+	padding: 10 25 10 25px;
+}
+
+.nav {
+	padding: 0px;
+	margin: 0px;
+}
+
+.nav-links > a:hover,
+.nav-links > a:focus,
+.nav-links > a:link 
+ {
+	color: white;
+}
+
+.large-input {
+		width: 300px;
+
 }
 
 .page-top-spacing {
@@ -30,13 +47,17 @@
 
 }
 
+form {
+	margin: 0px;
+}
+
 .main-body {
 	padding: 0px 15px 20px 15px;
 }
 
 .logo {
-	background-image: url("../images/tripping_white.png");
 	height: 40px;
+	
 }
 
 .detail-panel {
@@ -131,7 +152,7 @@
 	width: 14px;
 	height: 14px;
 	top:44%;
-	right:-7px;
+	right:-6px;
 	z-index: 10;
 	transform:rotate(45deg);
 	-ms-transform:rotate(45deg); /* IE 9 */
@@ -141,6 +162,10 @@
 
 .main-panel {
 	padding: 0 15 15 15px;
+}
+
+.date-picker {
+	top: 0;
 }
 
 
