@@ -20,26 +20,42 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
+			// function initialize() {
+			//   var myLatlng = new google.maps.LatLng(-27.5717, -48.6256);
+			//   var mapOptions = {
+			//     zoom: 18,
+			//     mapTypeId: google.maps.MapTypeId.SATELLITE,
+			//     center: myLatlng
+			//   }
+			//   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			//    map.setTilt(45);
+
+			//   var marker = new google.maps.Marker({
+			//       position: myLatlng,
+			//       map: map,
+			//       title: 'Hello World!'
+			//   });
+
+			//   var marker2latLng = new google.maps.LatLng(-27.5750, -48.6400);
+			//   var marker2 = new google.maps.Marker({
+			//       position: marker2latLng,
+			//       map: map,
+			//       title: 'Hello World!'
+			//   });
+			// }
+
+			// google.maps.event.addDomListener(window, 'load', initialize);
+
+			var map;
+
 			function initialize() {
-			  var myLatlng = new google.maps.LatLng(-27.5717, -48.6256);
 			  var mapOptions = {
-			    zoom: 12,
-			    center: myLatlng
-			  }
-			  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-			  var marker = new google.maps.Marker({
-			      position: myLatlng,
-			      map: map,
-			      title: 'Hello World!'
-			  });
-
-			  var marker2latLng = new google.maps.LatLng(-27.5750, -48.6400);
-			  var marker2 = new google.maps.Marker({
-			      position: marker2latLng,
-			      map: map,
-			      title: 'Hello World!'
-			  });
+			    center: new google.maps.LatLng(-27.4500, -48.3800),
+			    zoom: 14,
+			    mapTypeId: google.maps.MapTypeId.coordinate
+			  };
+			  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			  map.setTilt(45);
 			}
 
 			google.maps.event.addDomListener(window, 'load', initialize);
@@ -232,6 +248,7 @@ Additionally, it offers a kitchen with a fridge, a freezer, a grill, a microwave
 										</div>
 										<div class="row padding-top">
 											<div class="col-md-7">
+												<p class="grey-copy">Basic Information</p>
 												<table class="table">
 													  <tr>
 													  	<td><strong>Room Type:</strong></td>
@@ -261,6 +278,7 @@ Additionally, it offers a kitchen with a fridge, a freezer, a grill, a microwave
 												
 											</div>
 											<div class="col-md-5">
+												<p class="grey-copy">Amenities</p>
 												<ul class="list-group">
 											    <li class="list-group-item">cribs available<img src="images/check.png" class="pull-right"> </li>
 											    <li class="list-group-item">hair dryer<img src="images/check.png" class="pull-right"> </li>
@@ -307,11 +325,12 @@ Additionally, it offers a kitchen with a fridge, a freezer, a grill, a microwave
 						  <div class="panel-body">
 						  	<div class="row">
 						  		<div class="col-md-6">
-						  			<h2 class="text-muted">From $161</h2>
+						  			<h3 class="text-muted header-padding">From $161</h3>
 						  		</div>
 						  		<div class="col-md-6">
-						  			<div class="btn-group">
-										  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						  			<div class="btn-group btn-block">
+						  				
+										  <button type="button" class="btn btn-default dropdown-toggle btn-block" data-toggle="dropdown">
 										    Daily <span class="caret"></span>
 										  </button>
 										  <ul class="dropdown-menu" role="menu">
@@ -323,24 +342,43 @@ Additionally, it offers a kitchen with a fridge, a freezer, a grill, a microwave
 
 						  	</div>
 
-						  	<div class="row">
-						  		<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-									  <input class="span2" size="16" type="text" value="12-02-2012">
-									  <span class="add-on"><i class="icon-th"></i></span>
-									</div>
-						  		<form class="form-inline" role="form">
-									  <div class="form-group">
-									   
-									    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Check in">
-									    <div class="form-group">
-										    
-										    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Check out">
-										  </div>
-									  </div>
-									</form>
-						  	</div>
+						  	
 						  	<div class="row">
 						  		<div class="col-md-12">
+
+						  			<!-- input dates start -->
+						  			<form role="form">
+						  				<div class="row">
+						  					<div class="col-md-6">
+						  						<div class="form-group">
+			  										<div class="input-append">
+														  <div class="input-group">
+															  <input type="text" class="form-control" placeholder="Check-in">
+															  <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+															</div>
+														</div>
+			  									</div>
+						  					</div>
+						  					<div class="col-md-6">
+						  						<div class="form-group">
+			  										<div class="input-append">
+														  <div class="input-group">
+															  <input type="text" class="form-control" placeholder="Check-out">
+															  <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+															</div>
+														</div>
+			  									</div>
+						  					</div>
+						  				</div>
+  									
+  									
+						  			
+						  			
+									
+						  			<!-- input dates end -->
+
+						  			<p class="grey-copy">Subtotal</p>
+						  			<h1>$230.45</h1>
 						  		<button type="button" class="btn btn-lg btn-success btn-block">Book Now</button>
 						  		</div>
 						  	</div>
@@ -350,8 +388,9 @@ Additionally, it offers a kitchen with a fridge, a freezer, a grill, a microwave
 
 						<div class="panel panel-default">
 						  <div class="panel-body">
-						  	<button type="button" class="btn btn-info btn-block"><span class="glyphicon glyphicon-heart"></span> Add to Favorites</button>
-						  	Favorited 5 times
+						  	<button type="button" class="btn btn-info btn-block"><span class="glyphicon glyphicon-heart"></span> Save for later</button>
+						  	<h4 class="text-center grey-copy padding-top">
+						  	saved 5 times</h4>
 						 	</div>
 						</div>
 						<h4>Reviews</h4>
@@ -405,5 +444,6 @@ E a 5 minutos do shopping, um abrigo ótimo quando o calor é tórrido. <a href=
 		<!-- end main container -->
 		
 	</div>
+
 </body>
 </html>
