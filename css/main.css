@@ -1,0 +1,61 @@
+/*.row {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #F8F8F8;
+	border-color: red;
+
+}*/
+
+.header {
+	background-color: #f47322;
+	color: white;
+}
+
+.property-image {
+	width: 100%;
+}
+
+.body {
+	background-color: #F0F0F0;
+}
+
+.logo {
+	background-image: url("../images/tripping_white.png");
+	height: 40px;
+}
+
+.detail-panel {
+	padding: 5px;
+}
+
+.property-thumbnail {
+	width: 100px;
+	height: 70px;
+}
+
+.user-thumbnail {
+	width: 60px;
+	height: 60px;
+}
+
+.padding-top {
+	padding: 20px 10px 0px 10px;
+}
+
+.description-block {
+	padding: 10px;
+
+}
+
+.grey-copy {
+	color: grey;
+}
+
+.panel {
+	-moz-box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+	-webkit-box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+	box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+}
+
+
+
